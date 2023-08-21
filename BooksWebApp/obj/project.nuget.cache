@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b97/RMQNrUe5EaNJt6jHS5gQ0pUbUn0p3GfscP2K1ZJoBp8+HhXe9g/4EO/KBmCMHGhUlN3Eptt/yMUFBEjAAg==",
+  "dgSpecHash": "YuYu9g4/QtUdR6r+6JaWXRls7JoFMfNzMqiYrMqVWs7uEolfKNOobDfQjbx+noSUUJO0y6UQQcaJdl6cnYfIhQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\BooksWebApp.csproj",
+  "projectFilePath": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\BooksWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\prisc\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\prisc\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

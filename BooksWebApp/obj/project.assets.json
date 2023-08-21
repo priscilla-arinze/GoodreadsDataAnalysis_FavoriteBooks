@@ -1416,7 +1416,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "6.0.20"
         },
         "compile": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
+          "lib/net6.0/_._": {
             "related": ".xml"
           }
         },
@@ -11561,11 +11561,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\BooksWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\BooksWebApp.csproj",
       "projectName": "BooksWebApp",
-      "projectPath": "c:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\BooksWebApp.csproj",
+      "projectPath": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\BooksWebApp.csproj",
       "packagesPath": "C:\\Users\\prisc\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\obj\\",
+      "outputPath": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\BooksWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -11620,6 +11620,8 @@
             "version": "[6.0.20, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.20, )"
           },
