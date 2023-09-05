@@ -3,8 +3,12 @@
     "",
     "\\Data",
     "\\Data\\Migrations",
-    "\\Models"
+    "\\Models",
+    "\\Views",
+    "\\Views\\Books",
+    "\\wwwroot",
+    "\\wwwroot\\css"
   ],
-  "SelectedNode": "\\BooksWebApp.csproj",
+  "SelectedNode": "\\wwwroot\\css\\site.css",
   "PreviewInSolutionExplorer": false
 }

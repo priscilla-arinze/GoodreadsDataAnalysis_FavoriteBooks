@@ -22,8 +22,27 @@ namespace BooksWebApp.Controllers
         // GET: Books
         public async Task<IActionResult> Index()
         {
+              //list of all book results
               return _context.Book != null ? 
                           View(await _context.Book.ToListAsync()) :
+                          Problem("Entity set 'ApplicationDbContext.Book'  is null.");
+        }
+        // GET: Books/ShowSeachForm
+        public async Task<IActionResult> ShowSearchForm()
+        {
+            return View();
+        }
+
+        // POST: Books/ShowSeachResults
+        // parameter names need to match the input name from the specified view
+        public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
+        {
+            //list of filtered book results
+            return _context.Book != null ?
+                          View("Index", await _context.Book.Where(
+                                b => b.Title.Contains(SearchPhrase) || 
+                                b.Genre.Contains(SearchPhrase) || 
+                                b.Author.Contains(SearchPhrase)).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Book'  is null.");
         }
 
