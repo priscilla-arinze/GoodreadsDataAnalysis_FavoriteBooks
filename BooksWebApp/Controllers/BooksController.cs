@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BooksWebApp.Data;
 using BooksWebApp.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BooksWebApp.Controllers
 {
@@ -65,6 +66,7 @@ namespace BooksWebApp.Controllers
         }
 
         // GET: Books/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -75,6 +77,7 @@ namespace BooksWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Create([Bind("Id,Title,Author,Genre")] Book book)
         {
             if (ModelState.IsValid)
@@ -87,6 +90,7 @@ namespace BooksWebApp.Controllers
         }
 
         // GET: Books/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Book == null)
@@ -107,6 +111,7 @@ namespace BooksWebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Genre")] Book book)
         {
             if (id != book.Id)
@@ -138,6 +143,7 @@ namespace BooksWebApp.Controllers
         }
 
         // GET: Books/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Book == null)
@@ -158,6 +164,7 @@ namespace BooksWebApp.Controllers
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             if (_context.Book == null)
