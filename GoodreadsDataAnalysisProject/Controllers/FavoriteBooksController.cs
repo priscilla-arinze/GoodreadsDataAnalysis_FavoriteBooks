@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using BooksWebApp.Data;
-using BooksWebApp.Models;
+using GoodreadsDataAnalysis.Data;
+using GoodreadsDataAnalysis.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace BooksWebApp.Controllers
+namespace GoodreadsDataAnalysis.Controllers
 {
     public class FavoriteBooksController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDBContext _context;
 
-        public FavoriteBooksController(ApplicationDbContext context)
+        public FavoriteBooksController(ApplicationDBContext context)
         {
             _context = context;
         }
@@ -26,7 +26,7 @@ namespace BooksWebApp.Controllers
               //list of all book results
               return _context.FavoriteBooks != null ? 
                           View(await _context.FavoriteBooks.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Book'  is null.");
+                          Problem("Entity set 'ApplicationDBContext.Book'  is null.");
         }
         // GET: Books/ShowSeachForm
         public IActionResult ShowSearchForm()
@@ -44,7 +44,7 @@ namespace BooksWebApp.Controllers
                                 b => b.Title.Contains(SearchPhrase) || 
                                 b.Genre.Contains(SearchPhrase) || 
                                 b.Author.Contains(SearchPhrase)).ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Book'  is null.");
+                          Problem("Entity set 'ApplicationDBContext.Book'  is null.");
         }
 
         // GET: Books/Details/5
@@ -169,7 +169,7 @@ namespace BooksWebApp.Controllers
         {
             if (_context.FavoriteBooks == null)
             {
-                return Problem("Entity set 'ApplicationDbContext.Book'  is null.");
+                return Problem("Entity set 'ApplicationDBContext.Book'  is null.");
             }
             var book = await _context.FavoriteBooks.FindAsync(id);
             if (book != null)

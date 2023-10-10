@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BooksWebApp.Models
+namespace GoodreadsDataAnalysis.Models
 {
     public class FavoriteBook
     {

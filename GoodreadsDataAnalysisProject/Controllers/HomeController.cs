@@ -1,8 +1,8 @@
-﻿using BooksWebApp.Models;
+﻿using GoodreadsDataAnalysis.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace BooksWebApp.Controllers
+namespace GoodreadsDataAnalysis.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,4 +1,4 @@
-namespace BooksWebApp.Models
+namespace GoodreadsDataAnalysis.Models
 {
     public class ErrorViewModel
     {

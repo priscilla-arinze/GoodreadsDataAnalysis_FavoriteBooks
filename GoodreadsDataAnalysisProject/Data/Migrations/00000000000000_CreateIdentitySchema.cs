@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace BooksWebApp.Data.Migrations
+namespace GoodreadsDataAnalysis.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

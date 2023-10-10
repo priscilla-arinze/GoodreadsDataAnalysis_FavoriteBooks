@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BooksWebApp.Data.Migrations
+namespace GoodreadsDataAnalysis.Data.Migrations
 {
     public partial class AddRequiredDBAnnotations : Migration
     {

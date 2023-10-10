@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using BooksWebApp.Models;
+using GoodreadsDataAnalysis.Models;
 
-namespace BooksWebApp.Data
+namespace GoodreadsDataAnalysis.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDBContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options)
             : base(options)
         {
         }
-        public DbSet<BooksWebApp.Models.FavoriteBook>? FavoriteBooks { get; set; }
+        public DbSet<GoodreadsDataAnalysis.Models.FavoriteBook>? FavoriteBooks { get; set; }
     }
 }
