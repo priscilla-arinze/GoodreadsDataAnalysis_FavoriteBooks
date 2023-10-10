@@ -10,6 +10,6 @@ namespace BooksWebApp.Data
             : base(options)
         {
         }
-        public DbSet<BooksWebApp.Models.Book>? Book { get; set; }
+        public DbSet<BooksWebApp.Models.FavoriteBook>? FavoriteBooks { get; set; }
     }
 }

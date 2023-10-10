@@ -2,7 +2,7 @@
 
 namespace BooksWebApp.Models
 {
-    public class Book
+    public class FavoriteBook
     {
         [Key]
         public int Id { get; set; }
@@ -15,7 +15,7 @@ namespace BooksWebApp.Models
 
         public string Genre { get; set; }
 
-        public Book()
+        public FavoriteBook()
         {
             
         }

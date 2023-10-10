@@ -11,11 +11,11 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace BooksWebApp.Controllers
 {
-    public class BooksController : Controller
+    public class FavoriteBooksController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public BooksController(ApplicationDbContext context)
+        public FavoriteBooksController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -24,12 +24,12 @@ namespace BooksWebApp.Controllers
         public async Task<IActionResult> Index()
         {
               //list of all book results
-              return _context.Book != null ? 
-                          View(await _context.Book.ToListAsync()) :
+              return _context.FavoriteBooks != null ? 
+                          View(await _context.FavoriteBooks.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Book'  is null.");
         }
         // GET: Books/ShowSeachForm
-        public async Task<IActionResult> ShowSearchForm()
+        public IActionResult ShowSearchForm()
         {
             return View();
         }
@@ -39,8 +39,8 @@ namespace BooksWebApp.Controllers
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
             //list of filtered book results
-            return _context.Book != null ?
-                          View("Index", await _context.Book.Where(
+            return _context.FavoriteBooks != null ?
+                          View("Index", await _context.FavoriteBooks.Where(
                                 b => b.Title.Contains(SearchPhrase) || 
                                 b.Genre.Contains(SearchPhrase) || 
                                 b.Author.Contains(SearchPhrase)).ToListAsync()) :
@@ -50,12 +50,12 @@ namespace BooksWebApp.Controllers
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.FavoriteBooks == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book
+            var book = await _context.FavoriteBooks
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (book == null)
             {
@@ -78,7 +78,7 @@ namespace BooksWebApp.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Create([Bind("Id,Title,Author,Genre")] Book book)
+        public async Task<IActionResult> Create([Bind("Id,Title,Author,Genre")] FavoriteBook book)
         {
             if (ModelState.IsValid)
             {
@@ -93,12 +93,12 @@ namespace BooksWebApp.Controllers
         [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.FavoriteBooks == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book.FindAsync(id);
+            var book = await _context.FavoriteBooks.FindAsync(id);
             if (book == null)
             {
                 return NotFound();
@@ -112,7 +112,7 @@ namespace BooksWebApp.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Genre")] Book book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Author,Genre")] FavoriteBook book)
         {
             if (id != book.Id)
             {
@@ -146,12 +146,12 @@ namespace BooksWebApp.Controllers
         [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.FavoriteBooks == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book
+            var book = await _context.FavoriteBooks
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (book == null)
             {
@@ -167,14 +167,14 @@ namespace BooksWebApp.Controllers
         [Authorize]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Book == null)
+            if (_context.FavoriteBooks == null)
             {
                 return Problem("Entity set 'ApplicationDbContext.Book'  is null.");
             }
-            var book = await _context.Book.FindAsync(id);
+            var book = await _context.FavoriteBooks.FindAsync(id);
             if (book != null)
             {
-                _context.Book.Remove(book);
+                _context.FavoriteBooks.Remove(book);
             }
             
             await _context.SaveChangesAsync();
@@ -183,7 +183,7 @@ namespace BooksWebApp.Controllers
 
         private bool BookExists(int id)
         {
-          return (_context.Book?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.FavoriteBooks?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
