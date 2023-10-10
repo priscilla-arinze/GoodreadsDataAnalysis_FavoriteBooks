@@ -1,4 +1,4 @@
-# Project - Goodreads BooksWebApp
+# Project - Goodreads Data Analysis + Favorite Books
 
 ### Simple ASP.NET web application to accomplish 2 objectives:
 1. Using Python Pandas library to perform data analysis and visualization on an open source Goodreads dataset (CSV flat flies)
