@@ -44,7 +44,7 @@ namespace GoodreadsDataAnalysis.Controllers
                                 b => b.Title.Contains(SearchPhrase) || 
                                 b.Genre.Contains(SearchPhrase) || 
                                 b.Author.Contains(SearchPhrase)).ToListAsync()) :
-                          Problem("Entity set 'ApplicationDBContext.Book'  is null.");
+                          Problem("Entity set 'ApplicationDBContext.FavoriteBook'  is null.");
         }
 
         // GET: Books/Details/5
@@ -169,7 +169,7 @@ namespace GoodreadsDataAnalysis.Controllers
         {
             if (_context.FavoriteBooks == null)
             {
-                return Problem("Entity set 'ApplicationDBContext.Book'  is null.");
+                return Problem("Entity set 'ApplicationDBContext.FavoriteBook'  is null.");
             }
             var book = await _context.FavoriteBooks.FindAsync(id);
             if (book != null)

@@ -1,10 +1,21 @@
 ﻿@using GoodreadsDataAnalysis.Models
-@model Tuple<GoodreadsBook,GoodreadsBookToTag,GoodreadsTagsMapping,GoodreadsUserBookRating,GoodreadsUserBooksToRead>
-
+@model IEnumerable<GoodreadsBook>
+@* @model Tuple<GoodreadsBook,GoodreadsBookToTag,GoodreadsTagsMapping,GoodreadsUserBookRating,GoodreadsUserBooksToRead>
+ *@
 @{
     ViewData["Title"] = "Goodreads Data Analysis";
 }
 
-<h1>Goodreads Data Analysis</h1>
+<h1>Goodreads 10K Dataset Data Analysis</h1>
 
 <p>Under construction...</p>
+
+<br />
+<br />
+
+<h2>Top 5 Books in Dataset with the Highest Number of 5-Star Reviews</h2>
+
+@foreach (var book in Model)
+{
+    <p>@Html.DisplayFor(modelbook => book.OriginalTitle) by @Html.DisplayFor(modelbook => book.Authors)</p>
+}
