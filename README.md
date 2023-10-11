@@ -15,3 +15,12 @@
 * SQL Server DB
 * Python 3.9
 * Python Pandas Data Analysis library
+
+<hr>
+
+### Work in Progress:
+![Alt text](readme_imgs/home-page.png)
+
+![Alt text](readme_imgs/goodreads.png)
+
+![Alt text](readme_imgs/favorite-books.png)
