@@ -13,6 +13,7 @@
         * Reversed-engineered for EF6 Core with this scaffolding command: `Scaffold-DbContext "[INSERT CONNECTION STRING HERE]" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Tables GoodreadsBooks,GoodreadsBookToTags,GoodreadsTagsMapping,GoodreadsUserBookRatings,GoodreadsUserBooksToRead`
     * Objective 2 uses a **code-first** approach with the creation of a FavoriteBooks model and adding migrations for any database changes via code
 * SQL Server DB
+* Bootstrap 5
 * Python 3.9
 * Python Pandas Data Analysis library
 
