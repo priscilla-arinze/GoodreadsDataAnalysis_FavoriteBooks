@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 
 namespace GoodreadsDataAnalysis.Models
@@ -25,6 +26,9 @@ namespace GoodreadsDataAnalysis.Models
         public int Ratings2 { get; set; }
         public int Ratings3 { get; set; }
         public int Ratings4 { get; set; }
+
+        // Manually added non-clusted index to database table in SSMS
+            // Code-first annotation: [Index(IsUnique = false)]
         public int Ratings5 { get; set; }
         public string ImageUrl { get; set; } = null!;
         public string SmallImageUrl { get; set; } = null!;

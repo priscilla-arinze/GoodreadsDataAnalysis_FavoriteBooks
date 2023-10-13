@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\GoodreadsDataAnalysis.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\GoodreadsDataAnalysisProject\\wwwroot\\css\\VaporCustomTheme.css",
+      "PackagePath": "staticwebassets\\css\\VaporCustomTheme.css"
+    },
+    {
       "Id": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\GoodreadsDataAnalysisProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -14,9 +14,9 @@ namespace GoodreadsBookAnalysis.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public IActionResult Index()
         {
-            var topBooks5Star = _context.GoodreadsBooks
+            IEnumerable<GoodreadsBook> topBooks5Star = _context.GoodreadsBooks
             .OrderByDescending(book => book.Ratings5)
             .Take(5)
             .Select(book => new GoodreadsBook
@@ -25,9 +25,9 @@ namespace GoodreadsBookAnalysis.Controllers
                 Authors = book.Authors,
                 //AverageRating = book.AverageRating,
                 //CountOf5StarRatings = book.Ratings5
-            }).ToListAsync();
+            }).AsNoTracking();
 
-            return View("Index", await topBooks5Star);
+            return View("Index", topBooks5Star);
         }
     }
 }

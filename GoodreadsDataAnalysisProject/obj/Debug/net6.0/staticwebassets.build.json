@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bjLqmEqk/cJzP8XyoWBd3J5yl7IksRvmAhQVGpY6yDo=",
+  "Hash": "49/mLfaTjGiXmwVs9sQkXx4JVfyjiwchcGRDPE7hjlo=",
   "Source": "GoodreadsDataAnalysis",
   "BasePath": "_content/GoodreadsDataAnalysis",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\GoodreadsDataAnalysisProject\\wwwroot\\css\\VaporCustomTheme.css",
+      "SourceId": "GoodreadsDataAnalysis",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\GoodreadsDataAnalysisProject\\wwwroot\\",
+      "BasePath": "_content/GoodreadsDataAnalysis",
+      "RelativePath": "css/VaporCustomTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\VaporCustomTheme.css"
     },
     {
       "Identity": "C:\\Users\\prisc\\Documents\\aa_CODE\\Project - Goodreads-BooksWebApp\\GoodreadsDataAnalysisProject\\wwwroot\\favicon.ico",

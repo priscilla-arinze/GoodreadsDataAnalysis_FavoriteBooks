@@ -9,9 +9,9 @@
 <p>
     <a asp-action="Create">Add a Book</a>
 </p>
-<table class="table">
+<table class="table table-hover">
     <thead>
-        <tr>
+        <tr scope="col" class="table-light">
             <th>
                 @Html.DisplayNameFor(model => model.Title)
             </th>
@@ -26,7 +26,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr scope="row">
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
