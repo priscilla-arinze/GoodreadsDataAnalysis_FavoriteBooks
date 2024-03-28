@@ -25,3 +25,5 @@
 ![Alt text](readme_imgs/goodreads.png)
 
 ![Alt text](readme_imgs/favorite-books.png)
+
+*Making change for GithubMonitor Azure Function demo deployment*
